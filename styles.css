@@ -1,0 +1,248 @@
+:root{
+    --blue: #5C86FF;
+    --orange: #FF8C46;
+    --black: #333333;
+    --white: #ffffff;
+    --primary: #dddddd;
+    --lemon: #fff44f;
+    --money: #4CBB17;
+    --shadow: 0 1px 5px rgba(104,104,104, 0.8);
+    }
+    
+    *{
+    margin: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--black);
+    padding: 0;
+    box-sizing: border-box;
+    }
+    body{
+    background-color: var(--blue);
+    line-height: 1.4;
+    margin: 30px 50px;
+    
+    }
+    .btn{
+    background: var(--orange);
+    color: var(--white);
+    padding: 0.6rem 1.3rem;
+    text-decoration: none;
+    border: 0;
+    }
+    img{
+    max-width: 100%;
+    }
+    .products{
+    text-align: center;
+    font-family: 'Roboto Slab', serif;
+    color: white;
+    padding-top: 30px;
+    }
+    .all{
+    padding-top: 30px;
+    text-align: center;
+    font-weight: 600;
+    color: var(--blue);
+    }
+    .wrapper{
+    display: grid;
+    grid-gap: 20px;
+    color: var(--white)
+    }
+    .fa-user{
+    color: white;
+    }
+    .fa-shopping-cart{
+    color: white;
+    }
+    .fa-cog{
+    color: white;
+    }
+    .main-nav ul{
+    display: grid;
+    grid-gap: 20px;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    grid-template-columns: repeat(3, 1fr);
+    }
+    .main-nav a{
+    background: var(--orange);
+    list-style: none;
+    text-decoration: none;
+    display: block;
+    padding: 0.8rem;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    font-size: 1.0rem;
+    border-radius: 6px;
+    color: white;
+    }
+    .top-container{
+    display: grid;
+    grid-gap: 20px;
+    text-align: center;
+    grid-template-areas:
+     'showcase showcase top-box-a'
+     'showcase showcase top-box-b';
+    }
+    .showcase{
+    grid-area: showcase;
+    min-height: 400px;
+    background: url(images/hype5.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    box-shadow: (var(--shadow));
+    
+    }
+    .showcase h1{
+    font-size: 4rem;
+    margin-bottom: 0;
+    font-family: 'Noto Sans JP', sans-serif;
+    color: var(--white);
+    }
+    .showcase p{
+    font-size: 1.2rem;
+    margin-top: 10px;
+    color: var(--white);
+    }
+    .top-box{
+    box-shadow: var(--shadow);
+    background-color: var(--lemon);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    padding: 1.5rem;
+    border-radius: 5px;
+    
+    }
+    .slider{
+    max-height:  100vh;
+    }
+    .top-box-a{
+    grid-area: top-box-a;
+    }
+    .top-box-b{
+        grid-area: top-box-b;
+        }
+        p{
+        text-align: center;
+        }
+        h1{
+        text-align: center;
+        }
+        .top-box .pricing{
+        font-size: 1.7rem;
+        color: var(--money);
+        }
+        .boxes{
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(3,1fr);
+        }
+        .box{
+        margin-top: 20px;
+        padding: 10px 10px 10px 10px;
+    
+        background: var(--lemon);
+        border-radius: 5px;
+        text-align: center;
+        box-shadow: var(--shadow);
+        padding: 1.5rem, 2rem;
+        }
+        
+        .info{
+        background: var(--lemon);
+        box-shadow: var(--shadow);
+        display: grid;
+        grid-gap: 30px;
+        border-radius: 5px;
+        grid-template-columns: repeat(2, 1fr);
+        padding: 5em;
+        }
+        .items img{
+        border-radius: 5px;
+        width: 100%;
+
+        }
+        .backtotop{
+        text-align: center;
+        list-style: none;
+        text-decoration: none;
+        color: greenyellow;
+        }
+    
+        .login .logos{
+            float: right;
+        }
+        .zapps{
+            float: left;
+            color: white;
+            font-weight: 600;
+            font-size: 1.2rem;
+            font-family: 'Noto Sans JP', sans-serif;
+        }
+       
+    
+        .items{
+            display: grid;
+            grid-gap: 20px;
+            grid-template-columns: repeat(3,1fr);
+        }
+        .items img{
+        width: 100%;
+        box-shadow: var(--shadow);
+        }
+        .image1{
+        border-radius: 5px;
+        }
+        .footer{
+        margin-top: 2rem;
+        background: var(--light);
+        background:var(--orange);
+        border-radius: 5px;
+        color: white;
+        text-align: center;
+        padding: 1rem;
+        }
+        @media(max-width:700px) {
+        .top-container{
+        grid-template-areas:
+        'showcase showcase'
+        'top-box-a top-box-b';
+        }
+        .showcase h1{
+        font-size: 2.3rem;
+        }
+        .main-nav ul{
+        grid-template-columns: 1fr;
+        }
+        .info{
+        grid-template-columns: 1fr;
+        
+        }
+        .info .btn{
+        display: block;
+        text-align: center;
+        margin: auto;
+        }
+        }
+        @media(max-width:450px){
+        .top-container{
+        grid-template-areas:
+        'showcase'
+        'top-box-a'
+        'top-box-b';
+        }
+        body{
+        margin: 10px 10px;
+        }
+        }
+    
+    
